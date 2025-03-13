@@ -1,8 +1,8 @@
-<h1 style="color:lightgreen;">Ways to Write Strings in Dart</h1>
+<h1 style="color:lightgreen;">1.Ways to Write Strings in Dart</h1>
 
 Dart offers several ways to create strings:
 
-## Single-Quoted Strings:
+### <b>• <u>Single-Quoted Strings:</u></b>
 Use single quotes for simple strings.
 
 ```dart
@@ -12,17 +12,17 @@ print(s1); // Output: Hello
 }
 ```
 
-## Double-Quoted Strings:
+### <b>• <u>Double-Quoted Strings:</u></b>
 Use double quotes, which work the same as single quotes.
 
 ```dart
 void main() {
 String s2 = "World";
 print(s2); // Output: World
-)
+}
 ```
 
-## Automatic String Literal Concatenation:
+### <b>• <u>Automatic String Literal Concatenation:</u></b>
 Dart automatically concatenates adjacent string literals. For example, the following code:
 
 ```dart
@@ -33,7 +33,7 @@ print(s3); // Output: man
 ```
 Here, Dart concatenates 'm', 'a', and 'n' into the single string "man".
 
-## Multi-line Strings with Triple Quotes:
+### <b>• <u>Multi-line Strings with Triple Quotes:</u></b>
 Triple quotes allow you to write strings that span multiple lines.
 
 ```dart
@@ -46,8 +46,22 @@ multiple lines.''';
 }
 ```
 
-## Raw Strings:
+### <b>• <u>Raw Strings:</u></b>
+### witout raw string 
+```dart 
+void main() {
+  String rawStr = "Hello \n World";
+  print(rawStr);
+  /*
+  Hello
+   World
+  */
+}
+```
+### with raw string<br>
 Prefix with an `r` to create a raw string where escape sequences are not processed.
+
+Raw strings are used to create strings that contain backslashes without escaping them.
 
 ```dart
 void main() {
@@ -56,11 +70,12 @@ print(rawStr); // Output: Hello \n World
 }
 ```
 ---
-<h1 style="color:orange;">String Properties</h1>
+
+<h1 style="color:orange;">2.String Properties</h1>
 
 The Dart String class comes with several useful properties:
 
-## length:
+### <b>• <u> length: </u></b>
 Returns the number of code units (usually, the number of characters).
 
 ```dart
@@ -70,7 +85,7 @@ print(s.length); // Output: 4
 }
 ```
 
-## isEmpty and isNotEmpty:
+### <b>• <u> isEmpty and isNotEmpty: </u></b>
 Check if a string is empty or not.
 
 ```dart
@@ -81,7 +96,8 @@ print(s.isNotEmpty);       // Output: true
 }
 ```
 
-## codeUnits:
+### <b>• <u> codeUnits: </u></b> 
+Returns a list of the string's code units.<br>
 Returns a list of UTF-16 code units for each character.
 
 ```dart
@@ -90,7 +106,7 @@ print(s.codeUnits); // Output: [68, 97, 114, 116]
 }
 ```
 
-## runes:
+### <b>• <u> runes: </u></b>
 Returns an iterable of Unicode code points, which is useful for handling characters that might be more than one code unit.
 
 ```dart
@@ -99,7 +115,7 @@ print(s.runes); // Output: (68, 97, 114, 116)
 }
 ```
 
-## hashCode:
+### <b>• <u> hashCode: </u></b>
 Provides an integer hash code of the string (useful for collections).
 
 ```dart
@@ -108,7 +124,7 @@ print(s.hashCode); // Output: (An integer value)
 }
 ```
 
-## runtimeType:
+### <b>• <u> runtimeType: </u> </b>
 Returns the runtime type of the object (for strings, it is String).
 
 ```dart
@@ -116,11 +132,13 @@ void main() {
 print(s.runtimeType); // Output: String
 }
 ```
-<h1 style="color:cyan;">Common String Methods</h1>
+
+---
+<h1 style="color:cyan;">3.Common String Methods</h1>
 
 Dart strings include many methods for manipulation:
 
-## toUpperCase() / toLowerCase():
+### <b>• <u> toUpperCase() / toLowerCase(): </u></b>
 Convert the string to upper or lower case.
 
 ```dart
@@ -131,7 +149,7 @@ print(s.toLowerCase()); // Output: dart programming
 }
 ```
 
-## trim():
+### <b>• <u> trim(): </u></b>
 Removes leading and trailing whitespace.
 
 ```dart
@@ -141,7 +159,8 @@ print(padded.trim()); // Output: Hello World
 }
 ```
 
-## split():
+### <b>• <u> split(): </u></b> 
+Splits the string into a list of substrings based on a specified separator.<br>
 Splits the string using a delimiter and returns a list.
 
 ```dart
@@ -151,7 +170,7 @@ print(csv.split(",")); // Output: [apple, banana, cherry]
 }
 ```
 
-## substring():
+### <b>• <u> substring(): </u></b>
 Extracts a portion of the string between specified indices.
 
 ```dart
@@ -161,7 +180,7 @@ print(s.substring(0, 4)); // Output: Dart
 }
 ```
 
-## contains():
+### <b>• <u> contains(): </u></b>
 Checks if the string contains a specified substring.
 
 ```dart
@@ -170,7 +189,7 @@ print(s.contains("Pro")); // Output: true
 }
 ```
 
-## indexOf():
+### <b>• <u>indexOf(): </u></b>
 Finds the index of the first occurrence of a substring.
 
 ```dart
@@ -179,12 +198,19 @@ print(s.indexOf("Programming")); // Output: 5
 }
 ```
 
-## replaceAll() / replaceFirst():
+### <b>• <u> replaceAll() / replaceFirst(): </u></b>
 Replace parts of the string with another substring.
 
 ```dart
 void main() {
-String modified = s.replaceAll("Dart", "Flutter");
-print(modified); // Output: Flutter Programming
+
+  String s = "Dart Programming";
+  String modified = s.replaceAll("Dart", "Flutter");
+  print(modified); // Output: Flutter Programming
 }
+
 ```
+Explanation:<br>
+The string s is initialized with "Dart Programming".
+replaceAll("Dart", "Flutter") replaces "Dart" with "Flutter".
+The modified string is printed.
