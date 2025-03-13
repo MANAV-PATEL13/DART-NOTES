@@ -56,6 +56,7 @@ print(rawStr); // Output: Hello \n World
 }
 ```
 ---
+
 <h1 style="color:orange;">2.String Properties</h1>
 
 The Dart String class comes with several useful properties:
@@ -116,6 +117,7 @@ void main() {
 print(s.runtimeType); // Output: String
 }
 ```
+
 <h1 style="color:cyan;">3.Common String Methods</h1>
 
 Dart strings include many methods for manipulation:
@@ -184,6 +186,7 @@ Replace parts of the string with another substring.
 
 ```dart
 void main() {
+
   String s = "Dart Programming";
   String modified = s.replaceAll("Dart", "Flutter");
   print(modified); // Output: Flutter Programming
