@@ -649,12 +649,6 @@ void main() {
 - If a class does not override noSuchMethod(), calling a non-existent method will result in a runtime error.
 - Overriding noSuchMethod() allows greater flexibility but should be used carefully to avoid unexpected behaviors.
 ---
-<<<<<<< HEAD
-----
-----
--------
-=======
->>>>>>> a350503cbe6aa735e94f0ce623551f4ca68a3821
 
 
 
