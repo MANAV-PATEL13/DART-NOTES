@@ -203,6 +203,137 @@ void main() {
 
 ---
 
+I've already included a **comprehensive list of Dart Map methods** along with explanations and examples. However, if you're looking for **more advanced use cases, optimizations, or real-world applications**, here are a few **extra** topics that could be helpful:  
+
+---
+
+## **9️⃣ Converting Between Map and Other Data Types**  
+
+### **Convert Map to JSON (String)**
+```dart
+import 'dart:convert';
+
+void main() {
+  var person = {'name': 'Alice', 'age': 30};
+  var jsonString = jsonEncode(person);
+  print(jsonString);  // Output: {"name":"Alice","age":30}
+}
+```
+
+### **Convert JSON (String) to Map**
+```dart
+import 'dart:convert';
+
+void main() {
+  String jsonString = '{"name": "Alice", "age": 30}';
+  Map<String, dynamic> person = jsonDecode(jsonString);
+  print(person);  // Output: {name: Alice, age: 30}
+}
+```
+
+---
+
+## **🔟 Filtering a Map Based on Condition**
+```dart
+void main() {
+  var products = {'Laptop': 1200, 'Phone': 800, 'Tablet': 600};
+
+  var expensiveProducts = Map.fromEntries(
+    products.entries.where((entry) => entry.value > 700),
+  );
+
+  print(expensiveProducts);  // Output: {Laptop: 1200, Phone: 800}
+}
+```
+
+---
+
+## **1️⃣1️⃣ Using `entries` to Loop Through Key-Value Pairs**
+```dart
+void main() {
+  var countryCapital = {'India': 'Delhi', 'USA': 'Washington', 'Japan': 'Tokyo'};
+
+  for (var entry in countryCapital.entries) {
+    print('${entry.key} -> ${entry.value}');
+  }
+}
+```
+
+---
+
+## **1️⃣2️⃣ Nested Maps (Map Inside a Map)**
+```dart
+void main() {
+  var company = {
+    'name': 'Tech Corp',
+    'departments': {
+      'HR': {'employees': 10},
+      'IT': {'employees': 30}
+    }
+  };
+
+  print(company['departments']?['IT']?['employees']); // Output: 30
+}
+```
+
+---
+
+## **1️⃣3️⃣ Sorting a Map by Keys or Values**
+
+### **Sorting by Keys**
+```dart
+void main() {
+  var scores = {'Alice': 90, 'Charlie': 85, 'Bob': 95};
+
+  var sortedByKey = Map.fromEntries(
+    scores.entries.toList()..sort((a, b) => a.key.compareTo(b.key)),
+  );
+
+  print(sortedByKey);  // Output: {Alice: 90, Bob: 95, Charlie: 85}
+}
+```
+
+### **Sorting by Values**
+```dart
+void main() {
+  var scores = {'Alice': 90, 'Charlie': 85, 'Bob': 95};
+
+  var sortedByValue = Map.fromEntries(
+    scores.entries.toList()..sort((a, b) => a.value.compareTo(b.value)),
+  );
+
+  print(sortedByValue);  // Output: {Charlie: 85, Alice: 90, Bob: 95}
+}
+```
+
+---
+
+## **1️⃣4️⃣ Using Map with Stream and Future**
+### **Fetching Data Asynchronously**
+```dart
+import 'dart:async';
+
+Future<Map<String, int>> fetchScores() async {
+  await Future.delayed(Duration(seconds: 2)); // Simulate network delay
+  return {'Alice': 85, 'Bob': 90, 'Charlie': 95};
+}
+
+void main() async {
+  print('Fetching scores...');
+  var scores = await fetchScores();
+  print(scores);  // Output after 2 sec: {Alice: 85, Bob: 90, Charlie: 95}
+}
+```
+
+---
+
+## **🔥 Final Thoughts**
+- This section **expands** on the previous guide by covering **more advanced Dart Map techniques**.  
+- Understanding **JSON, asynchronous operations, and sorting** will help in **real-world applications**.  
+- **Try implementing Maps in a small project**, like a **student database**, **shopping cart**, or **task manager**!  
+
+Would you like me to add **even more advanced techniques** or **a real-world use case** for practice? 🚀
+
 ## **🔥 Summary**
 
 | Concept                 | Description                                             |
