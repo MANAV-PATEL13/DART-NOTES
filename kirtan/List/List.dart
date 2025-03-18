@@ -91,3 +91,54 @@
 //   // var numbers = [5, 3, 8, 2];
 //   // var maxNumber = numbers.reduce((a, b) => a > b ? a : b);
 //   // print(maxNumber); // Output: 8
+
+// void main() {
+//   // num number1 = num.parse('42'); // Parses an integer
+//   // num number2 = num.parse('3.14'); // Parses a double
+
+//   // print(number1); // 42
+//   // print(number2); // 3.14
+
+//   // num? number3 = num.tryParse('invalid'); // Returns null
+//   // print(number3); // null
+
+ 
+// }
+
+// void main() {
+//   List<int> fixedEmpty = List.empty(growable: false); // Fixed-length empty list
+//   print(fixedEmpty); // []
+
+//   List<int> growableEmpty = List.empty(growable: true); // Growable empty list
+//   growableEmpty.add(5);
+//   print(growableEmpty); // [5]
+// }
+
+// void main() {
+//   List<int> numbers = List.filled(5, 0);
+//   print(numbers); // [0, 0, 0, 0, 0]
+
+//   numbers[2] = 10;
+//   print(numbers); // [0, 0, 10, 0, 0]
+// }
+
+// void main() {
+//   List<int> squares = List.generate(5, (index) => index * index);
+//   print(squares); // [0, 1, 4, 9, 16]
+// }
+
+// void main() {
+//   List<int> original = [1, 2, 3];
+//   List<int> copy = List.of(original);
+
+//   copy.add(4);
+//   print(copy); // [1, 2, 3, 4]
+// }
+
+// void main() {
+//   List<int> readOnly = List.unmodifiable([1, 2, 3]);
+
+//   print(readOnly); // [1, 2, 3]
+
+//   // readOnly.add(4); // This will throw an error
+// }
