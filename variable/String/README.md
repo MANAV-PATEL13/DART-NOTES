@@ -81,7 +81,8 @@ Returns a list of UTF-16 code units for each character.
 
 ```dart
 void main() {
-print(s.codeUnits); // Output: [68, 97, 114, 116]
+  String s = "DaRt";
+  print(s.codeUnits); // Output: [68, 97, 114, 116]
 }
 ```
 
@@ -90,7 +91,8 @@ Provides an integer hash code of the string (useful for collections).
 
 ```dart
 void main() {
-print(s.hashCode); // Output: (An integer value)
+  String s = "Dart";
+  print(s.hashCode); // Output: (An integer value, e.g., 255588839)
 }
 ```
 
